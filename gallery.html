@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    <link rel="icon" type="image/x-icon" href="shahbaz.jpg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .container{
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1{
+            margin: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        font-size: 3rem;
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card{
+            width:32%;
+            position: relative; /*image ke upar text ko overlap krana hai*/
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 15px; /*card ke corner ko rounded krne ke liye */
+
+        }
+        .card img{
+            height:100%;/*image card me fit ho ke corner rounded ho jayega*/
+            width:100%;
+            filter: grayscale(100%);
+box-shadow: 0 0 20px #333;
+object-fit: cover;
+        }
+        
+        .card:hover{
+            transform:scale(1.03);
+            transition: 0.5s;
+            filter: drop-shadow(0 0 10px #333);
+        }
+.card:hover img{
+    filter: grayscale(0%);
+}
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height:20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 1000px 1000px;
+    transition:0.3s;
+    background: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(255,255,255,0));
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>My Gallery</h1>
+        <div class="gallery">
+                
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image1</figcaption>
+            </figure>
+            <figure class="card">
+                <img src=https://www.mmarchitecturalphotography.com/chicago-architectural-photographer/uploads/2016/01/night-exterior-photographer.jpg>
+<figcaption>image2</figcaption>
+            </figure>
+            <figure class="card">
+                <img src=https://www.goodfreephotos.com/albums/other-photos/corner-building-and-architecture-in-the-city.jpg>
+<figcaption>image3</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image4</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.327d20eb3d22c30b636ecbb779da4e57?rik=vueUqQ%2bWpN6ZiQ&riu=http%3a%2f%2fcdn.onlyinyourstate.com%2fwp-content%2fuploads%2f2016%2f04%2f13535412304_3b829f6122_h.jpg&ehk=0qlz8yyMnCR9mwy6kZilBjxdy7ZpG9amzWDYXXciiJE%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image5</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image6</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image7</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image8</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="https://th.bing.com/th/id/R.8014731bbd5a6b57fa772fccb8653038?rik=%2fp%2bNCzs5UuBaug&riu=http%3a%2f%2fwonderfulengineering.com%2fwp-content%2fuploads%2f2014%2f01%2fbuilding-wallpaper.jpeg&ehk=Y6e8DJu5l31WDk1f5XrN%2biuqOrXdC%2fZvh7MMWsbzOc0%3d&risl=&pid=ImgRaw&r=0">
+<figcaption>image9</figcaption>
+            </figure>
+
+        </div>
+        </div>
+    </div>
+</body>
+</html>
